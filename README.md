@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/Aryan10Ben?tab=repositories"><strong>Projects</strong></a> &nbsp;✦&nbsp;
-  <a href="resume.md"><strong>Resume</strong></a> &nbsp;✦&nbsp;
+  <a href="https://drive.google.com/file/d/1LSvd4hRfNUInnaWxyTKuCGYs-r-sw4Ud/view?usp=drivesdk"><strong>Resume</strong></a> &nbsp;✦&nbsp;
   <a href="https://www.linkedin.com/in/aryan-kumar-7847b61b2/"><strong>LinkedIn</strong></a> &nbsp;✦&nbsp;
   <a href="https://github.com/Aryan10Ben"><strong>GitHub</strong></a>
 </p>
