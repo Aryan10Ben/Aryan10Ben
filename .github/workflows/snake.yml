@@ -1,0 +1,33 @@
+name: Contribution snake
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/snake.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: false
+jobs:
+  snake:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: Aryan10Ben
+          outputs: |
+            assets/github-contribution-grid-snake.svg?color_snake=#0284c7&color_dots=#e2e8f0,#bae6fd,#38bdf8,#0284c7,#075985
+            assets/github-contribution-grid-snake-dark.svg?color_snake=#22d3ee&color_dots=#111827,#0c3547,#155e75,#0891b2,#22d3ee
+      - name: Publish generated graphics
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/github-contribution-grid-snake*.svg
+          git diff --cached --quiet || git commit -m 'Refresh contribution animation'
+          git push origin HEAD:main
