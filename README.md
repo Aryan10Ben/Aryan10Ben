@@ -88,8 +88,6 @@
 <td align="center"><a href="https://www.codechef.com/users/aryan10000"><img src="https://cdn.simpleicons.org/codechef/8B7355" width="48" height="48" alt="CodeChef"></a></td>
 </tr></table>
 
-<p align="center"><strong>Codeforces: <a href="https://codeforces.com/profile/akaryan97105">akaryan97105</a></strong></p>
-
 <div align="center">
 
 [![Current rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcodeforces.com%2Fapi%2Fuser.info%3Fhandles%3Dakaryan97105%26checkHistoricHandles%3Dfalse&query=%24.result%5B0%5D.rating&label=Current%20rating&color=0284c7&style=flat-square)](https://codeforces.com/profile/akaryan97105) [![Peak rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcodeforces.com%2Fapi%2Fuser.info%3Fhandles%3Dakaryan97105%26checkHistoricHandles%3Dfalse&query=%24.result%5B0%5D.maxRating&label=Peak%20rating&color=0284c7&style=flat-square)](https://codeforces.com/profile/akaryan97105) [![Rank](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcodeforces.com%2Fapi%2Fuser.info%3Fhandles%3Dakaryan97105%26checkHistoricHandles%3Dfalse&query=%24.result%5B0%5D.rank&label=Rank&color=0284c7&style=flat-square)](https://codeforces.com/profile/akaryan97105)
