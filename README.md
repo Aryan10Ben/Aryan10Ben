@@ -24,9 +24,9 @@
 </picture>
 <br/><br/>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-about.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-about-light.svg">
-  <img src="assets/card-about-light.svg" width="100%" alt="Final-year student at NIT Agartala, focused on backend and applied AI">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-about-v2.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-about-v2-light.svg">
+  <img src="assets/card-about-v2-light.svg" width="100%" alt="Final-year Mechanical Engineering undergraduate at NIT Agartala, Class of 2027. Purposeful software, backend systems and software architecture.">
 </picture>
 <br/><br/>
 <picture>
