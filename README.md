@@ -90,14 +90,6 @@
 
 <div align="center">
 
-[![Current rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcodeforces.com%2Fapi%2Fuser.info%3Fhandles%3Dakaryan97105%26checkHistoricHandles%3Dfalse&query=%24.result%5B0%5D.rating&label=Current%20rating&color=0284c7&style=flat-square)](https://codeforces.com/profile/akaryan97105) [![Peak rating](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcodeforces.com%2Fapi%2Fuser.info%3Fhandles%3Dakaryan97105%26checkHistoricHandles%3Dfalse&query=%24.result%5B0%5D.maxRating&label=Peak%20rating&color=0284c7&style=flat-square)](https://codeforces.com/profile/akaryan97105) [![Rank](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcodeforces.com%2Fapi%2Fuser.info%3Fhandles%3Dakaryan97105%26checkHistoricHandles%3Dfalse&query=%24.result%5B0%5D.rank&label=Rank&color=0284c7&style=flat-square)](https://codeforces.com/profile/akaryan97105)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-cp-text.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-cp-text-light.svg">
-  <img src="assets/card-cp-text-light.svg" width="100%" alt="Resume-reported coding milestones">
-</picture>
-<br/><br/>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/github-contribution-grid-snake.svg">
