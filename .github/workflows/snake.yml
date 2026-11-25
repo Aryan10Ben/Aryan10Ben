@@ -1,33 +1,55 @@
 name: Contribution snake
+
 on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, gourab-layout-preview]
     paths: [".github/workflows/snake.yml"]
+
 permissions:
   contents: write
+
 concurrency:
-  group: contribution-snake
+  group: contribution-snake-${{ github.ref }}
   cancel-in-progress: false
+
 jobs:
   snake:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/gourab-layout-preview'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Aryan10Ben
           outputs: |
-            assets/github-contribution-grid-snake.svg?color_snake=#0284c7&color_dots=#e2e8f0,#bae6fd,#38bdf8,#0284c7,#075985
+            assets/github-contribution-grid-snake.svg?color_snake=#22d3ee&color_dots=#111827,#0c3547,#155e75,#0891b2,#22d3ee
             assets/github-contribution-grid-snake-dark.svg?color_snake=#22d3ee&color_dots=#111827,#0c3547,#155e75,#0891b2,#22d3ee
-      - name: Publish generated graphics
+
+      - name: Add rounded cells and neon glow
+        run: |
+          GLOW_CSS='.c{rx:3px;ry:3px}.s{filter:drop-shadow(0 0 6px #22d3ee) drop-shadow(0 0 12px #0891b2)}.u{filter:drop-shadow(0 0 4px rgba(34,211,238,0.5))}'
+          for f in assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg; do
+            test -s "$f"
+            sed -i "s|</style>|${GLOW_CSS}</style>|" "$f"
+          done
+
+      - name: Publish graphics to the triggering branch
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/github-contribution-grid-snake*.svg
-          git diff --cached --quiet || git commit -m 'Refresh contribution animation'
-          git push origin HEAD:main
+          git add assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Refresh contribution animation'
+          git pull --rebase origin "$TARGET_BRANCH"
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"
